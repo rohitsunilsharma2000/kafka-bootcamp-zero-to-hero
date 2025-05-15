@@ -77,3 +77,73 @@ Here are **Top 10 Scenario-Based Apache Kafka Interview Questions**, ranging fro
 📌 *Scenario:* Prevent OOM when consumer lags behind producer
 
 ---
+
+## 🔹 **11. How do you ensure message ordering across multiple partitions for the same user or entity?**
+
+✅ *Concepts:* Custom partitioner, message keys, partition affinity
+📌 *Scenario:* Order events for a user must be processed in sequence
+
+---
+
+## 🔹 **12. How would you implement a retry mechanism for failed Kafka message processing?**
+
+✅ *Concepts:* Retry topics, backoff strategies, DLQ
+📌 *Scenario:* Transient DB failures during consumer processing
+
+---
+
+## 🔹 **13. Your Kafka topic has high lag even though consumers seem healthy. What could be the cause?**
+
+✅ *Concepts:* Lag diagnosis, message size, consumer poll loop, GC pauses
+📌 *Scenario:* Spikes in producer rate cause system-wide lag
+
+---
+
+## 🔹 **14. What happens when you increase the number of partitions in a topic from 3 to 6?**
+
+✅ *Concepts:* Data redistribution, ordering impact, consumer rebalancing
+📌 *Scenario:* Order-sensitive topic needs scaling without breaking processing logic
+
+---
+
+## 🔹 **15. How do you implement multi-region Kafka replication and failover?**
+
+✅ *Concepts:* MirrorMaker 2.0, active-passive vs active-active
+📌 *Scenario:* Disaster recovery for Kafka across AWS regions
+
+---
+
+## 🔹 **16. How do you handle schema evolution in Kafka when consuming Avro or Protobuf messages?**
+
+✅ *Concepts:* Schema Registry, backward/forward compatibility
+📌 *Scenario:* Adding a new field to a production schema
+
+---
+
+## 🔹 **17. A consumer keeps getting `OffsetOutOfRangeException`. What’s happening and how do you fix it?**
+
+✅ *Concepts:* Retention policies, reset strategies
+📌 *Scenario:* Consumer starts too late; topic data expired
+
+---
+
+## 🔹 **18. How do you design an idempotent Kafka consumer?**
+
+✅ *Concepts:* Message deduplication, external ID stores, transactional outbox
+📌 *Scenario:* A billing system must not double-charge a customer
+
+---
+
+## 🔹 **19. How would you secure a Kafka cluster in production?**
+
+✅ *Concepts:* TLS, SASL, ACLs, encryption
+📌 *Scenario:* You need to isolate teams and encrypt all traffic
+
+---
+
+## 🔹 **20. You want to trace an event across microservices that use Kafka. How do you implement distributed tracing?**
+
+✅ *Concepts:* Correlation ID, OpenTelemetry, Kafka headers
+📌 *Scenario:* Trace an order event through 5 services in a pipeline
+
+---
